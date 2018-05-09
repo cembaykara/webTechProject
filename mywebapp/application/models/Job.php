@@ -2,16 +2,9 @@
 
 require_once (__DIR__ . '/../database/DatabaseConnection.php');
 
-/**
- * Class User
- * @property int $id
- * @property string $firstname
- * @property string $lastname
- * @property string $email
- */
-class User {
+class Job {
 
-    public function getUserProfile()
+    public function getJob()
     {
         // create PDO connection object
         $dbConn = new DatabaseConnection();
@@ -20,7 +13,7 @@ class User {
         // get user id from session variable
         $userID = $_SESSION['userID'];
 
-        $statement = $pdo->prepare("SELECT id, firstname, lastname, email FROM `users` WHERE id = :id LIMIT 1");
+        $statement = $pdo->prepare("SELECT id, body, fk_from_user, fk_applied_users FROM `job` WHERE id = :id LIMIT 1");
         $statement->bindParam(':id', $userID);
         $statement->execute();
 
@@ -31,11 +24,11 @@ class User {
             return [];
         }
 
-        $userData = $result[0];
+        $jobData = $result[0];
 
-        return $userData;
+        return $jobData;
     }
 }
 
-$user = new User();
-$userData = $user->getUserProfile();
+$job = new Job();
+$jobData = $job->getJob();
