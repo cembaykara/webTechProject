@@ -12,7 +12,7 @@ function register() {
     $firstname = $postedData['firstname'];
     $lastname = $postedData['lastname'];
     $password = $postedData['password'];
-    $confirmPassword = $postedData['confirm_password'];
+    $role = $postedData['role'];
 
     //TODO: we should validate our data before inserting to database
 
@@ -25,13 +25,14 @@ function register() {
         ':firstname' => $firstname,
         ':lastname' => $lastname,
         ':password' => password_hash($password, PASSWORD_DEFAULT), // we MUST not store password as plain text
-        ':email' => $email
+        ':email' => $email,
+        ':is_employer' => $role
     ];
 
     try {
         $statement = $pdo->prepare(
-            "INSERT INTO `users` (`firstname`, `lastname`, `password`, `email`) 
-                          VALUES (:firstname, :lastname, :password, :email)"
+            "INSERT INTO `users` (`firstname`, `lastname`, `password`, `email`, `is_employer`) 
+                          VALUES (:firstname, :lastname, :password, :email, :is_employer)"
         );
 
         $statement->execute($params);
