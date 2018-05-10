@@ -1,0 +1,22 @@
+You can find our mapper robot and runner robot in seperate folders.
+Dependencies and robot model files are in a seperate folder.
+
+--------------------------------  DISCLAIMER  --------------------------------  
+
+1. There are two programs. One for running the robot and one for mapping the maze.
+You should first run maze mapper and then feed the output to the runner program.
+Upon completion the mapping the program will ask you to save the coordinates file
+which you should then give to the runner program when asked.
+
+2. We found that the sweet spot for the runner programm is when;
+
+		VELOCITY		: 3.5
+		TOLERANCE		: 0.1
+		ROT TOLERANCE 	: 2
+
+3. Since they are two different LabView programs, the dependencies may give some errors.
+To solve them replace the subVI's with the ones from the dependencies folder.
+
+MERIH KANER
+BARIS CEM BAYKARA
+ANASTASIYA IKONNIKAVA
