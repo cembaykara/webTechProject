@@ -8,6 +8,7 @@ require_once (__DIR__ . '/../database/DatabaseConnection.php');
  * @property string $firstname
  * @property string $lastname
  * @property string $email
+ * @param $email user email
  */
 class User {
 

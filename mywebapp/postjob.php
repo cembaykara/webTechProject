@@ -1,17 +1,6 @@
-<!-- ******************************************
-*  Author : Baris Cem Baykara   
-*  Created On : Wed May 09 2018
-*  File : postjob.html
-******************************************* -->
 <?php
 require_once ('protected_access_check.php');
-require_once ('application/models/User.php');
-
-/**
- * @var $userData User
- */
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 

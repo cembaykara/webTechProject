@@ -1,8 +1,7 @@
 <?php
 
-session_start();
-
 require_once ("database/DatabaseConnection.php");
+
 /**
  * This is the function that handles the registration
  */
@@ -37,7 +36,7 @@ function post() {
         $statement->execute($params);
 
         if ($pdo->lastInsertId()) {
-            echo "Posted";
+            header('Location: /mywebapp/profile.php');
             return;
         }
 
@@ -45,9 +44,6 @@ function post() {
         // usually this error is logged in application log and we should return an error message that's meaninful to user
         echo $e->getMessage();
     }
-
-    echo "Posted";
-
     return;
 }
 
