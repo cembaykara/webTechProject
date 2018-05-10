@@ -1,8 +1,24 @@
-.card {
+#cardso{
+    -moz-column-count: 3;
+    -moz-column-width: 40%;
+    -moz-column-gap: 20%;
+    -webkit-column-count: 3;
+    -webkit-column-width: 40%;
+    -webkit-column-gap: 20%;
+    column-count: 3;
+    column-width: 40%;
+    column-gap: 20%,
+}
+
+.card  {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 920px;
+    width: 500px;
     margin: auto;
     text-align: center;
+    margin-bottom: 20px;
+    margin-inline-start: 10%;
+    margin-inline-end: 10%;
+    display: inline-block;
 }
 
 .title {
