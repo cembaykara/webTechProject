@@ -26,10 +26,6 @@ function update() {
         ':firstname' => $firstname,
         ':lastname' => $lastname,
         ':email' => $email,
-        ':address' => $address,
-        ':city' => $city,
-        ':postal_code' => $postcode,
-        ':telephone' => $telephone,
         ':id' => $postedData['id']
     ];
 

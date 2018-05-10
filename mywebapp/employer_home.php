@@ -38,11 +38,34 @@
                     echo "$firstjob[title]";
                 
                 ?>
-
-
+                </br>
+                <div id = "cardso">
+                </div>
         </div>
      
-   
+<script>
+
+    function card(){
+        var jobs = <?php echo json_encode($jobData); ?>; 
+        
+    for(var i = 0; i < jobs.length; i++) {
+        var div = document.createElement("div");
+        div.className = "card";
+        var company = document.createElement("h1");
+        company.innerHTML = jobs[i].company;
+        var title = document.createElement("p");
+        title.className = "title";
+        title.innerHTML = jobs[i].title;
+        var body = createElement("p");
+        body.innerHTML = jobs[i].body;
+        div.appendChild(company);
+        div.appendChild(title);
+        div.appendChild(body);
+        document.getElementById("cardso").append(div);
+        }
+    }
+    window.onload = card;
+</script>
 
 </body>
 </html>
