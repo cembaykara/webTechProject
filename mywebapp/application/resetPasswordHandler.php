@@ -3,7 +3,7 @@ session_start();
 
 require_once("database/DatabaseConnection.php");
 
-require_once("mailSender.php");
+//require_once("mailSender.php");
 
 class ResetPassword
 {
@@ -40,11 +40,11 @@ class ResetPassword
             }
 
             $body = "Use the link below to reset your password<br> http://localhost:8888/mywebapp/changePassword.php?token=" . self::RESET_HASH . "&email=" . $email;
-            sendMail(
-                'Reset password',
-                $body,
-                $email
-            );
+            // sendMail(
+            //     'Reset password',
+            //     $body,
+            //     $email
+            // );
 
             $_SESSION['success_message'] = 'Kindly check your email for the reset link!';
             header('Location: /mywebapp/resetpassword.php');

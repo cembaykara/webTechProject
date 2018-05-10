@@ -1,6 +1,6 @@
 <?php
 require_once ("database/DatabaseConnection.php");
-require_once ("mailSender.php");
+//require_once ("mailSender.php");
 /**
  * This is the function that handles the registration
  */
@@ -38,11 +38,11 @@ function register() {
 
         if ($pdo->lastInsertId()) {
             header('Location: /mywebapp/profile.php');
-            sendMail(
-                "Registration was successful",
-                "Hello {$firstname}, Welcome to goforkabit.com, you registration was successful!",
-                $email
-            );
+            // sendMail(
+            //     "Registration was successful",
+            //     "Hello {$firstname}, Welcome to goforkabit.com, you registration was successful!",
+            //     $email
+            // );
             return;
         }
 
