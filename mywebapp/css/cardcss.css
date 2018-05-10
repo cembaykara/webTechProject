@@ -12,10 +12,14 @@
 
 .card  {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    width: 500px;
+    max-width: 500px;
     margin: auto;
     text-align: center;
     margin-bottom: 20px;
+    -moz-margin-inline-start: 10%;
+    -webkit-margin-inline-start: 10%;
+    -moz-margin-inline-end: 10%;
+    -webkit-margin-inline-end: 10%;
     margin-inline-start: 10%;
     margin-inline-end: 10%;
     display: inline-block;
