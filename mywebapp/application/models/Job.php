@@ -4,7 +4,7 @@ require_once (__DIR__ . '/../database/DatabaseConnection.php');
 
 class Job {
 
-    public function getJob()
+    public function getAllJobs()
     {
         // create PDO connection object
         $dbConn = new DatabaseConnection();
@@ -31,4 +31,4 @@ class Job {
 }
 
 $job = new Job();
-$jobData = $job->getJob();
+$jobData = $job->getAllJobs();
