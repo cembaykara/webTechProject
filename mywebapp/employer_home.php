@@ -40,6 +40,7 @@
                 ?>
                 </br>
                 <div id = "cardso">
+                
                 </div>
         </div>
      
@@ -51,17 +52,21 @@
     for(var i = 0; i < jobs.length; i++) {
         var div = document.createElement("div");
         div.className = "card";
-        var company = document.createElement("h1");
-        company.innerHTML = jobs[i].company;
+        // var company = document.createElement("h1");
+        // company.innerHTML = jobs[i].company;
         var title = document.createElement("p");
         title.className = "title";
         title.innerHTML = jobs[i].title;
-        var body = createElement("p");
+        var body = document.createElement("p");
         body.innerHTML = jobs[i].body;
-        div.appendChild(company);
+        var button = document.createElement("p");
+        button.innerHTML = "<button>Apply</button>";
+        //div.appendChild(company);
         div.appendChild(title);
         div.appendChild(body);
+        div.appendChild(button);
         document.getElementById("cardso").append(div);
+
         }
     }
     window.onload = card;

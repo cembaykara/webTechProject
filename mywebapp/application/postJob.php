@@ -9,7 +9,6 @@ require_once ("models/User.php");
 function post() {
 
     $userID = $_SESSION['userID'];
-    $userName = $userData[firstname];
     $postedData = $_POST['data'];
 
     $title = $postedData['title'];
@@ -26,14 +25,13 @@ function post() {
     $params = [
         ':title' => $title,
         ':body' => $body,
-        ':company' => $userName,
         ':fk_from_user' => $userID
     ];
 
     try {
         $statement = $pdo->prepare(
-            "INSERT INTO `job` (`fk_from_user`, `title`, `body`, `company`) 
-                          VALUES (:fk_from_user, :title, :body, :company)"
+            "INSERT INTO `job` (`fk_from_user`, `title`, `body`) 
+                          VALUES (:fk_from_user, :title, :body)"
         );
 
         $statement->execute($params);
