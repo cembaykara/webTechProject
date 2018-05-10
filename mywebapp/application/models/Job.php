@@ -14,7 +14,7 @@ class Job {
         $userID = $_SESSION['userID'];
 
         $statement = $pdo->prepare("SELECT id, body, fk_from_user, fk_applied_users FROM `job` WHERE id = :id LIMIT 1");
-        $statement->bindParam(':fk_from_user', $userID);
+        $statement->bindParam(':id', $userID);
         $statement->execute();
 
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
@@ -28,7 +28,6 @@ class Job {
 
         return $jobData;
     }
-
 }
 
 $job = new Job();

@@ -19,7 +19,6 @@ require_once ('protected_access_check.php');
         <p>
             <label>body: </label>
             <input type="text" name="data[body]"/>
-
         <p>
             <input type="reset" name="btnClear" value="Clear" class="button"/>
             <input type="submit" name="btnSubmit" value="Post" class="button marL10"/>

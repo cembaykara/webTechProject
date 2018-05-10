@@ -41,7 +41,7 @@ function login()
             $_SESSION['isLoggedIn'] = true;
             $_SESSION['userID'] = $userData['id'];
             $_SESSION['success_message'] = 'User login successfully';
-            header('Location: /mywebapp/employer_home.php');
+            header('Location: /mywebapp/profile.php');
 
             unset($_SESSION['error_message']);
             return;
