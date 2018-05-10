@@ -61,11 +61,8 @@ session_start();
 					</div>
 
 					<div class="text-center p-t-136">
-<<<<<<< HEAD
 						<a class="txt2" href="signin.html">
-=======
 						<a class="txt2" href="signup.html">
->>>>>>> ff1ce088aec265a52d9eab530c90bcdf34c2e6ca
 							Create your Account
 							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
 						</a>
