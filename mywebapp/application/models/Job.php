@@ -24,7 +24,7 @@ class Job {
             return [];
         }
 
-        $jobData = $result[0];
+        $jobData = $result;
 
         return $jobData;
     }
