@@ -1,10 +1,7 @@
 <?php
-
+session_start();
 require_once ("database/DatabaseConnection.php");
 
-/**
- * This is the function that handles the registration
- */
 function post() {
 
     $userID = $_SESSION['userID'];
@@ -13,14 +10,9 @@ function post() {
     $title = $postedData['title'];
     $body = $postedData['body'];
 
-
-    //TODO: we should validate our data before inserting to database
-
-    // create PDO connection object
     $dbConn = new DatabaseConnection();
     $pdo = $dbConn->getConnection();
 
-    // insert using PDO prepared statement, it helps prevents against sql injection attack (more on that later)
     $params = [
         ':title' => $title,
         ':body' => $body,
@@ -41,11 +33,10 @@ function post() {
         }
 
     } catch (PDOException $e) {
-        // usually this error is logged in application log and we should return an error message that's meaninful to user
+        
         echo $e->getMessage();
     }
     return;
 }
 
-// call to the register function
 post();
