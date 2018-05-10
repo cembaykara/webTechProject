@@ -4,7 +4,7 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login</title>
+	<title>ata$a | login</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -61,7 +61,6 @@ session_start();
 					</div>
 
 					<div class="text-center p-t-136">
-						<a class="txt2" href="signin.html">
 						<a class="txt2" href="signup.html">
 							Create your Account
 							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
