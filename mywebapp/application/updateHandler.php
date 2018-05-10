@@ -11,10 +11,6 @@ function update() {
     $email = $postedData['email'];
     $firstname = $postedData['firstname'];
     $lastname = $postedData['lastname'];
-    $address = $postedData['address'];
-    $city = $postedData['city'];
-    $postcode = $postedData['postcode'];
-    $telephone = $postedData['telephone'];
 
     // create PDO connection object
     $dbConn = new DatabaseConnection();
@@ -38,8 +34,6 @@ function update() {
     try {
         $statement = $pdo->prepare(
             "UPDATE `users` SET firstname = :firstname, lastname = :lastname, email = :email,
-                        address = :address, city = :city, postal_code = :postal_code, telephone = :telephone, 
-                        profile_avatar = :profile_avatar
                         WHERE id = :id"
         );
 
