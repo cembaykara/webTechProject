@@ -1,7 +1,10 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>ata$a</title>
+	<title>Login</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -30,19 +33,42 @@
 					<img src="images/img-01.png" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" action="application/loginHandler.php" method="POST">
 					<span class="login100-form-title">
-						Welcome to Ata$a
+						Login
 					</span>
-				  <div class="container-login100-form-btn">
-						<button type="button" class="login100-form-btn" onclick="location.href='login.php'">
+
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="email" name="data[email]" placeholder="email">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Password is required">
+						<input class="input100" type="password" name="data[password]" placeholder="password">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+					</div>
+					
+					<div class="container-login100-form-btn">
+						<button type="submit" class="login100-form-btn">
 							Login
 						</button>
 					</div>
-					  <div class="container-login100-form-btn">
-						<button type="button" class="login100-form-btn" onclick="location.href='signup.html'">
-							Sign-up
-						</button>
+
+					<div class="text-center p-t-136">
+<<<<<<< HEAD
+						<a class="txt2" href="signin.html">
+=======
+						<a class="txt2" href="signup.html">
+>>>>>>> ff1ce088aec265a52d9eab530c90bcdf34c2e6ca
+							Create your Account
+							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+						</a>
 					</div>
 				</form>
 			</div>
@@ -69,5 +95,9 @@
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
 
+<?php
+unset($_SESSION['error_message']);
+unset($_SESSION['success_message']);
+?>
 </body>
 </html>

@@ -1,96 +1,89 @@
 <?php
 session_start();
 ?>
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
-	<title>Login</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-<!--===============================================================================================-->
+    <title>::Login::</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="/mywebapp/css/main.css" type="text/css">
+    <link rel="shortcut icon" href="/mywebapp/images/favicon.ico?v=2" type="image/x-icon"/>
 </head>
 <body>
-	
-	<div class="limiter">
-		<div class="container-login100">
-			<div class="wrap-login100">
-				<div class="login100-pic js-tilt" data-tilt>
-					<img src="images/img-01.png" alt="IMG">
-				</div>
+<div id="wrapper">
+    <div id="maincontent">
 
-				<form class="login100-form validate-form" action="application/loginHandler.php" method="POST">
-					<span class="login100-form-title">
-						Login
-					</span>
+        <div id="header">
+            <div id="logo" class="left">
+                <a href="/mywebapp">ICD0007</a>
+            </div>
+            <div class="right marT10">
+                <b>
+                    <a href="/mywebapp/login.php">Login</a> | <a href="/mywebapp/register.html">Register</a>
+                </b>
+            </div>
+            <br><br>
+            <ul class="topmenu">
+                <li><a href="/mywebapp">Home</a></li>
+                <li><a href="/mywebapp">Student Lists</a></li>
+                <li><a href="/mywebapp">Contact Us</a></li>
+            </ul>
+            <br>
+            <div class="banner"><p></p></div>
+            <br class="clear"/>
+        </div>
 
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100" type="email" name="data[email]" placeholder="email">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-envelope" aria-hidden="true"></i>
-						</span>
-					</div>
+        <div class="content">
+            <br/>
+            <div class="content-area">
 
-					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<input class="input100" type="password" name="data[password]" placeholder="password">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-lock" aria-hidden="true"></i>
-						</span>
-					</div>
-					
-					<div class="container-login100-form-btn">
-						<button type="submit" class="login100-form-btn">
-							Login
-						</button>
-					</div>
+                <h2>Login</h2>
+                <br/>
 
-					<div class="text-center p-t-136">
-						<a class="txt2" href="signin.html">
-							Create your Account
-							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-						</a>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-	
-	
+                <b>Please enter your information.</b><br/><br/>
+                <form action="/mywebapp/application/loginHandler.php" method="POST">
+                    <?php
+                        if (isset($_SESSION['error_message'])) {
+                            echo '<p>' . $_SESSION['error_message'] . '</p>';
+                        }
+                        if (isset($_SESSION['success_message'])) {
+                            echo '<p>' . $_SESSION['success_message'] . '</p>';
+                        }
+                     ?>
+                    <p>
+                        <label>Email: </label>
+                        <input type="text" name="data[email]" />
+                    </p>
+                    <p>
+                        <label>Password: </label>
+                        <input type="password" name="data[password]" />
+                    <p>
+                    <p>
+                        <input type="submit" name="data[submit]" value="Submit" class="button marL10"/>
+                    </p>
+                </form>
 
-	
-<!--===============================================================================================-->	
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/tilt/tilt.jquery.min.js"></script>
-	<script >
-		$('.js-tilt').tilt({
-			scale: 1.1
-		})
-	</script>
-<!--===============================================================================================-->
-	<script src="js/main.js"></script>
+                <br>
+                <br>
+                <br>
+                <a href="resetpassword.php">Forgot password</a>
+            </div>
+        </div>
 
+    </div><!-- maincontent -->
+    <br>
+    <div id="footer">
+        <div class="footer">
+            Copyright &copy; 2018 ICD0007. <br/>
+            <a href="/mywebapp">Home</a> | <a href="about">About Us</a> | <a href="contact">Contact Us</a> <br/>
+            <span class="contact">Tel: +372-1111111&nbsp;
+			Email:icd007@icd0007.com</span>
+        </div>
+    </div><!-- footer -->
+
+</div><!-- wrapper -->
 <?php
 unset($_SESSION['error_message']);
 unset($_SESSION['success_message']);
