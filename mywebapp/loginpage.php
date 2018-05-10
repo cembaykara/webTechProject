@@ -39,7 +39,7 @@ session_start();
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="data[email]" placeholder="email">
+						<input class="input100" type="email" name="data[email]" placeholder="email">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
@@ -47,7 +47,7 @@ session_start();
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<input class="input100" type="password" name="pass" placeholder="Password">
+						<input class="input100" type="password" name="data[password]" placeholder="password">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
@@ -55,7 +55,7 @@ session_start();
 					</div>
 					
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
+						<button type="submit" class="login100-form-btn">
 							Login
 						</button>
 					</div>
@@ -91,5 +91,9 @@ session_start();
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
 
+<?php
+unset($_SESSION['error_message']);
+unset($_SESSION['success_message']);
+?>
 </body>
 </html>
