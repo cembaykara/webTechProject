@@ -2,7 +2,7 @@
 session_start();
 require_once ("database/DatabaseConnection.php");
 
-function removePost(){
+function removePerson(){
 
     $postedData = $_POST['data'];
     $sentId = $postedData['id'];
@@ -11,7 +11,7 @@ function removePost(){
         $pdo = $dbConn->getConnection();
 
     try{
-        $statement = $pdo->prepare("DELETE FROM `job` WHERE id = :id");
+        $statement = $pdo->prepare("DELETE FROM `users` WHERE id = :id");
         $statement->bindParam(':id', $sentId);
         $statement->execute();
     }
@@ -21,11 +21,11 @@ function removePost(){
 }
 
 if ($_SESSION['isAdmin']){
-    header("Location: ../remove_post_admin.php");
+    header("Location: ../remove_people_admin.php");
 }else{
     header("Location: ../dashboard.php");
 }
 
 }
 
-removePost();
+removePerson();

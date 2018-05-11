@@ -36,7 +36,32 @@ class User {
 
         return $userData;
     }
+
+    public function getEverythingLikeNoOther()
+    {
+        // create PDO connection object
+        $dbConn = new DatabaseConnection();
+        $pdo = $dbConn->getConnection();
+
+
+        $statement = $pdo->prepare("SELECT * FROM `users` ");
+        $statement->execute();
+
+        $allresult = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+        // no user matching the email
+        if (empty($allresult)) {
+            return [];
+        }
+
+        $everyone = $allresult;
+
+        return $everyone;
+    }
 }
+
+
 
 $user = new User();
 $userData = $user->getUserProfile();
+$everyone = $user->getEverythingLikeNoOther();

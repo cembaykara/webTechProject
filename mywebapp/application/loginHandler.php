@@ -40,10 +40,14 @@ function login()
         if (password_verify($password, $userEncryptedPassword)) {
             $_SESSION['isLoggedIn'] = true;
             $_SESSION['userID'] = $userData['id'];
+            $_SESSION['isAdmin'] = $userData['is_admin'];
             $_SESSION['userIsEmployer'] = $userData['is_employer'];
             $_SESSION['success_message'] = 'User login successfully';
 
-            if ($_SESSION['userIsEmployer']){
+
+            if($_SESSION['isAdmin']){
+                header('Location: /mywebapp/dashboard_admin.php');
+            }else if ($_SESSION['userIsEmployer']){
                 header('Location: /mywebapp/dashboard.php');
             }else{
                 header('Location: /mywebapp/dashboard_employee.php');
