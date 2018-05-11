@@ -37,7 +37,6 @@
 			<div class="topnav">
   				<a href="profile.php">Edit Profile</a>
   				<a href="postjob.php">Create New</a>
-				<a href="#" onclick="remove()" >Remove Post</a>
 				</div>
 				<div class="text-center p-t-136">
 					<a class="txt2">
@@ -79,14 +78,14 @@ unset($_SESSION['error_message']);
 unset($_SESSION['success_message']);
 ?>
 <script>
-	var jobs = <?php echo json_encode($jobData); ?>; 
+	var jobs = <?php echo json_encode($allJobs); ?>; 
 function card(){
 	
 	
 for(var i = 0; i < jobs.length; i++) {
 	var form = document.createElement("form");
 	form.method = "POST"
-	form.action = "application/removePost.php"
+	form.action = "application/apply.php"
 	var div = document.createElement("div");
 	div.className = "card";
 	// var company = document.createElement("h1");
@@ -97,8 +96,7 @@ for(var i = 0; i < jobs.length; i++) {
 	var body = document.createElement("p");
 	body.innerHTML = jobs[i].body;
 	var button = document.createElement("p");
-	button.innerHTML = "<button name='apply'>Apply</button>";
-	//div.appendChild(company);
+	button.innerHTML = "<button type='submit' name='data[id]' value='"+ jobs[i].id +"'>Apply</button>";
 	div.appendChild(title);
 	div.appendChild(body);
 	div.appendChild(button);
@@ -108,18 +106,6 @@ for(var i = 0; i < jobs.length; i++) {
 	}
 }
 window.onload = card;
-
-function remove(){
-var buttons = document.getElementsByName("apply");
-for(var i = 0; i < buttons.length; i++){
-	buttons[i].style.backgroundColor = "red";
-	buttons[i].innerHTML = "Remove";
-	buttons[i].value = jobs[i].id;
-	buttons[i].onclick = function(e) { 
-		submit();
-    };
-	}
-}
 
 </script>
 </body>
