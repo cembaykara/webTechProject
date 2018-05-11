@@ -40,8 +40,15 @@ function login()
         if (password_verify($password, $userEncryptedPassword)) {
             $_SESSION['isLoggedIn'] = true;
             $_SESSION['userID'] = $userData['id'];
+            $_SESSION['userIsEmployer'] = $userData['is_employer'];
             $_SESSION['success_message'] = 'User login successfully';
-            header('Location: /mywebapp/profile.php');
+
+            if ($_SESSION['userIsEmployer']){
+                header('Location: /mywebapp/dashboard.php');
+            }else{
+                header('Location: /mywebapp/dashboard_employee.php');
+            }
+            
 
             unset($_SESSION['error_message']);
             return;

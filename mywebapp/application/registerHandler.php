@@ -1,9 +1,7 @@
 <?php
 require_once ("database/DatabaseConnection.php");
 //require_once ("mailSender.php");
-/**
- * This is the function that handles the registration
- */
+
 function register() {
     $postedData = $_POST['data'];
 
@@ -49,8 +47,9 @@ function register() {
     } catch (PDOException $e) {
         // usually this error is logged in application log and we should return an error message that's meaninful to user
         echo $e->getMessage();
+        
     }
-
+    header('Location: /mywebapp/login.php');
     echo "Registration was not successful";
 
     return;
