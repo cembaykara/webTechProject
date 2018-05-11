@@ -38,7 +38,8 @@ class Job {
         // get user id from session variable
         $userID = $_SESSION['userID'];
 
-        $statement = $pdo->prepare("SELECT id, title, body, fk_from_user, fk_applied_users FROM `job` ");
+        $statement = $pdo->prepare("SELECT id, title, body, fk_from_user, fk_applied_users FROM `job` WHERE fk_applied_users != $userID");
+        $statement->bindParam(':fk_applied_users', $userID);
         $statement->execute();
 
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);

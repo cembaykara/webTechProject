@@ -29,6 +29,13 @@ function apply() {
 
         $statement->execute($params);
 
+        $statement = $pdo->prepare(
+            "INSERT INTO `job` (`fk_applied_users`) 
+                          SELECT id FROM `applied` WHERE :fk_job = :fk_job");
+        $statement->execute();
+
+
+
         if ($pdo->lastInsertId()) {
             header('Location: /mywebapp/dashboard_employee.php');
             // sendMail(
