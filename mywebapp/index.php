@@ -45,16 +45,16 @@ if($_SESSION['isLoggedIn']){
 
 		<div class="container-login100">
 
-<div class="w3-content w3-section" style="max-height:200px; ">
-	<img class="photoSlide" src="images/slidebanner/boss.png" style="max-height: 200px; height:80%; width:100%">
-	<img class="photoSlide" src="images/slidebanner/worker1.png" style="max-height: 200px; height:80%; width:100%">
-	<img class="photoSlide" src="images/slidebanner/worker2.png" style="max-height: 200px; height:80%; width:100%">
-	<img class="photoSlide" src="images/slidebanner/worker3.png" style="max-height: 200px; height:80%; width:100%">
-		</div>
+
 
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
-					<img src="images/img-01.png" alt="IMG">
+					<div class="w3-content w3-section" style="max-height:350px; ">
+						<img class="photoSlide" src="images/slidebanner/boss.png" style="height:350px; width: 350px; object-fit: cover">
+						<img class="photoSlide" src="images/slidebanner/worker1.png" style="height:350px; width: 350px; object-fit: cover">
+						<img class="photoSlide" src="images/slidebanner/worker2.png" style="height:350px; width: 350px; object-fit: cover">
+						<img class="photoSlide" src="images/slidebanner/worker3.png" style="height:350px; width: 350px; object-fit: cover  ">
+					</div>
 				</div>
 
 				<form class="login100-form validate-form">
@@ -76,6 +76,10 @@ if($_SESSION['isLoggedIn']){
 		</div>
 	</div>
 	
+	<div class="navbar" style="display: inline-flex; background-color: #FFFFFF; bottom:0; position: fixed; width:100% ; height:40px">
+		<button type="button" class="login100-form-btn" onclick="location.href='index.php'" style="display: inline-flex; height:30px; width:150px"> index</button>
+		<button type="button" class="login100-form-btn" onclick="location.href='about.html'" style="display: inline-flex; height:30px; width:150px">About us</button>
+	</div>
 	
 
 	

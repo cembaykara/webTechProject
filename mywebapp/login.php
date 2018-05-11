@@ -71,7 +71,10 @@ session_start();
 		</div>
 	</div>
 	
-	
+	<div class="navbar" style="display: inline-flex; background-color: #FFFFFF; bottom:0; position: fixed; width:100% ; height:40px">
+		<button type="button" class="login100-form-btn" onclick="location.href='index.php'" style="display: inline-flex; height:30px; width:150px"> index</button>
+		<button type="button" class="login100-form-btn" onclick="location.href='about.html'" style="display: inline-flex; height:30px; width:150px">About us</button>
+	</div>
 
 	
 <!--===============================================================================================-->	
