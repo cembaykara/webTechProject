@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>ata$a | sign-up</title>
+	<title>ata$a | profile</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -26,71 +26,34 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<div class="login100-pic js-tilt" data-tilt>
-					<img src="images/img-01.png" alt="IMG">
-				</div>
+				
 
-				<form class="login100-form validate-form" id="registerForm" action="application/registerHandler.php" method="POST">
+			<div style="width:auto; margin:0 auto;" class="content">
+					
+
+				<form id="updateForm"  action="application/updateHandler.php" method="POST" enctype="multipart/form-data">
 					<span class="login100-form-title">
-						Sign-up
+						Profile
+					</span>
+					<span class="login100-form-title" style="text-align: left; font-size: 10pt; line-height: 14pt">
+						Welcome to Ata$a- the future of short-term job seeking for all. We are proud to present this top notch website created by us, Baris Cem Baykara, Merih Kaner, Artur Kerge and Merlin-Eliise Salus. We all worked very hard overcoming all the obstacles that were faced in the makings. 
+						This website offers an opportunity for everyone to enjoy a registration and a logging in form after which they are directed to either the employer side or the employee’s side. We also have an administrator that can keep an eye on everything that is going on and make sure there is no funny business happening.
+						We used all the knowledge we could find in the fields of PHP, MySQL, HTML, Javascript and CSS. For storing our data, we are using a state of the art database provided to us where all the passwords are protected from prying eyes.
+						On the more technical side, our site provides the opportunity for employers to post different work offers for potential workers to see and then apply for as they see fit. For the employee, they can search for a job fit for them and also create a small CV on site with the help of a simple form that can be seen by the employer as well.
+						We would like to thank Git for providing us with amazing teamwork capabilities, Slack for fast communication, lectures for providing us with the basics and Bing for making sure we got the details in place.
+						From us from Group 13 or, as we are now known, Ata$a- we hope that this is good enough to be pleasing and user-friendly, unlike most job portals ☺
 					</span>
 
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100" type="email" name="data[email]" placeholder="email">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-envelope" aria-hidden="true" ></i>
-						</span>
-					</div>
-
-					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<input class="input100" type="password" name="data[password]" placeholder="password">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-lock" aria-hidden="true"></i>
-						</span>
-					</div>
 					
-					<div class="wrap-input100 validate-input">
-						<input class="input100" type="text" name="data[firstname]" placeholder="firstname">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-id-card" aria-hidden="false"></i>
-						</span>
-					</div>
-					
-					<div class="wrap-input100 validate-input">
-						<input class="input100" type="text" name="data[lastname]" placeholder="lastname">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-id-card" aria-hidden="false"></i>
-						</span>
-					</div>
-					
-					<div class="wrap-input100 validate-input">
-						<label ><input class="input100" type="checkbox" name="data[role]" value="1"> Are you an employer? </label>
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="alert-primary" aria-hidden="true"></i>
-						</span>
-					</div>
-					
-				  <div class="container-login100-form-btn">
-						<button type="submit" class="login100-form-btn">
-							Sign-up
-						</button>
-					</div>
-
-					<div class="text-center p-t-136"><a class="txt2" href="login.php"> Login <em class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></em></a></div>
 				</form>
 			</div>
 		</div>
 	</div>
-	
 	<div class="navbar" style="display: inline-flex; background-color: #FFFFFF; bottom:0; position: fixed; width:100% ; height:40px">
 		<button type="button" class="login100-form-btn" onclick="location.href='index.php'" style="display: inline-flex; height:30px; width:150px"> index</button>
 		<button type="button" class="login100-form-btn" onclick="location.href='about.html'" style="display: inline-flex; height:30px; width:150px">About us</button>
 	</div>
+	
 
 	
 <!--===============================================================================================-->	
