@@ -34,7 +34,11 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-			
+			<form class="login100-form validate-form">
+					<span class="login100-form-title">
+						Welcome <?php echo $userData["firstname"];?>
+					</span>
+			</form>
 				<div class="topnav">
   					<a class="navtext" href="profile.php">Edit Profile</a>
   					<a class="navtext" href="postjob.php">Create New</a>

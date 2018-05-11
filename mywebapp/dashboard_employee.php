@@ -14,8 +14,6 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
 <!--===============================================================================================-->	
 	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
@@ -25,7 +23,7 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
 	<link rel="stylesheet" type="text/css" href="css/cardcss.css">
 <!--===============================================================================================-->	
 </head>
@@ -34,6 +32,11 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
+			<form class="login100-form validate-form">
+					<span class="login100-form-title">
+						Welcome <?php echo $userData["firstname"];?> <?php echo $userData["lastname"] ?>
+					</span>
+			</form>
 			<div class="topnav">
 					<a class="navtext" href="profile.php">Edit Profile</a>
 					<a class="navtext" href="logout.php"> Logout</a>
