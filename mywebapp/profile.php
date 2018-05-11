@@ -34,22 +34,12 @@ require_once ('application/models/User.php');
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<div class="text-center p-t-136">
-					<a class="txt2">
-					<?php
-                	if (isset($_SESSION['error_message'])) {
-                    	echo '<p>' . $_SESSION['error_message'] . '</p>';
-                	} elseif (isset($_SESSION['success_message'])) {
-                    	echo '<p>' . $_SESSION['success_message'] . '</p>';
-                	}
-                	?>
-							
-					</a>
-				</div>
+				
 
-			<div class="content">
+			<div style="width:auto; margin:0 auto;" class="content">
 					
-				<form id="updateForm" class="login100-form validate-form" action="application/updateHandler.php" method="POST" enctype="multipart/form-data">
+
+				<form id="updateForm"  action="application/updateHandler.php" method="POST" enctype="multipart/form-data">
 					<span class="login100-form-title">
 						Profile
 					</span>
@@ -85,52 +75,17 @@ require_once ('application/models/User.php');
 							Update
 						</button>
 					</div>
-
 					<div class="text-center p-t-136">
-						<a class="txt2" href="logout.php">
-							logout
-							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+						<a class="txt2">
+							<?php
+                				if (isset($_SESSION['error_message'])) {
+                    				echo '<p>' . $_SESSION['error_message'] . '</p>';
+                				} elseif (isset($_SESSION['success_message'])) {
+                    				echo '<p>' . $_SESSION['success_message'] . '</p>';
+                				}
+                			?>
 						</a>
 					</div>
-				</form>
-
-				<form id="updateForm" class="login100-form validate-form" action="application/updateHandler.php" method="POST" enctype="multipart/form-data">
-					<span class="login100-form-title">
-						Profile
-					</span>
-
-					<input type="hidden" name="data[id]" value="<?= $userData['id']; ?>"/>
-
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100" type="email" name="data[email]" value="<?= $userData['email']; ?>">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-envelope" aria-hidden="true"></i>
-						</span>
-					</div>
-
-					<div class="wrap-input100 validate-input">
-						<input class="input100" type="text" name="data[firstname]" value="<?= $userData['firstname']; ?>">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-id-card" aria-hidden="false"></i>
-						</span>
-					</div>
-					
-					<div class="wrap-input100 validate-input">
-						<input class="input100" type="text" name="data[lastname]" value="<?= $userData['lastname']; ?>">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-id-card" aria-hidden="false"></i>
-						</span>
-					</div>
-					
-					<div class="container-login100-form-btn">
-						<button type="submit" class="login100-form-btn">
-							Update
-						</button>
-					</div>
-
 					<div class="text-center p-t-136">
 						<a class="txt2" href="logout.php">
 							logout
