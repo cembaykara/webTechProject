@@ -36,16 +36,22 @@ if($_SESSION['isLoggedIn']){
 <!--===============================================================================================-->
 </head>
 <body>
-<div class="w3-content w3-section" style="max-height:200px">
+
+
+
+	<div class="limiter">
+
+		
+
+		<div class="container-login100">
+
+<div class="w3-content w3-section" style="max-height:200px; ">
 	<img class="photoSlide" src="images/slidebanner/boss.png" style="max-height: 200px; height:80%; width:100%">
 	<img class="photoSlide" src="images/slidebanner/worker1.png" style="max-height: 200px; height:80%; width:100%">
 	<img class="photoSlide" src="images/slidebanner/worker2.png" style="max-height: 200px; height:80%; width:100%">
 	<img class="photoSlide" src="images/slidebanner/worker3.png" style="max-height: 200px; height:80%; width:100%">
-</div>
+		</div>
 
-
-	<div class="limiter">
-		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
 					<img src="images/img-01.png" alt="IMG">
