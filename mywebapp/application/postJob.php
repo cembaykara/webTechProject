@@ -37,7 +37,7 @@ function post() {
         $statement->execute($params);
 
         if ($pdo->lastInsertId()) {
-            header('Location: /mywebapp/profile.php');
+            header('Location: /mywebapp/dashboard.php');
             return;
         }
 
