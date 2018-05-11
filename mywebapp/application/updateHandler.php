@@ -40,7 +40,12 @@ function update() {
         $statement->execute($params);
 
         $_SESSION['success_message'] = 'Update was successful';
-        header('Location: /mywebapp/profile.php');
+        if($_SESSION['userIsEmployer']){
+            header('Location: /mywebapp/dashboard.php');
+        } else {
+            header('Location: /mywebapp/dashboard_employee.php');
+        }
+        
         return;
     } catch (PDOException $e) {
         var_dump($e->getMessage());

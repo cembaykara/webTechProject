@@ -36,11 +36,11 @@
 			<div class="wrap-login100">
 			
 				<div class="topnav">
-  					<a href="profile.php">Edit Profile</a>
-  					<a href="postjob.php">Create New</a>
-					<a href="#" onclick="remove()" >Remove Post</a>
-					<a href="logout.php"> Logout</a>
+  					<a class="navtext" href="profile.php">Edit Profile</a>
+  					<a class="navtext" href="postjob.php">Create New</a>
+					<a class="navtext" href="logout.php"> Logout</a>
 				</div>
+</br>
 				
 				<div class="text-center p-t-136">
 					<a class="txt2">
@@ -99,16 +99,13 @@ for(var i = 0; i < jobs.length; i++) {
 	form.action = "application/removePost.php"
 	var div = document.createElement("div");
 	div.className = "card";
-	// var company = document.createElement("h1");
-	// company.innerHTML = jobs[i].company;
 	var title = document.createElement("p");
 	title.className = "title";
 	title.innerHTML = jobs[i].title;
 	var body = document.createElement("p");
 	body.innerHTML = jobs[i].body;
 	var button = document.createElement("p");
-	button.innerHTML = "<button name='apply'>Apply</button>";
-	//div.appendChild(company);
+	button.innerHTML = "<button class='remove' type='submit' name='data[id]' value='"+ jobs[i].id +"'>Remove</button>";
 	div.appendChild(title);
 	div.appendChild(body);
 	div.appendChild(button);
@@ -118,18 +115,6 @@ for(var i = 0; i < jobs.length; i++) {
 	}
 }
 window.onload = card;
-
-function remove(){
-var buttons = document.getElementsByName("apply");
-for(var i = 0; i < buttons.length; i++){
-	buttons[i].style.backgroundColor = "red";
-	buttons[i].innerHTML = "Remove";
-	buttons[i].value = jobs[i].id;
-	buttons[i].onclick = function(e) { 
-		submit();
-    };
-	}
-}
 
 </script>
 </body>

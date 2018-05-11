@@ -31,10 +31,10 @@
 }
 
 .topnav {
-    display: inline-block;
+    width:100%;
 }
 
-button {
+.apply {
     border: none;
     outline: 0;
     display: inline-block;
@@ -47,7 +47,20 @@ button {
     font-size: 18px;
 }
 
-a {
+.remove {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: red;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.navtext {
     text-decoration: none;
     font-size: 22px;
     color: black;

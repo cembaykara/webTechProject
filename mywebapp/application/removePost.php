@@ -4,8 +4,8 @@ require_once ("database/DatabaseConnection.php");
 
 function removePost(){
 
-    $postedData = $_POST['id'];
-    $sentId = $postedData;
+    $postedData = $_POST['data'];
+    $sentId = $postedData['id'];
 
     $dbConn = new DatabaseConnection();
         $pdo = $dbConn->getConnection();

@@ -35,8 +35,8 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 			<div class="topnav">
-  				<a href="profile.php">Edit Profile</a>
-  				<a href="postjob.php">Create New</a>
+					<a class="navtext" href="profile.php">Edit Profile</a>
+					<a class="navtext" href="logout.php"> Logout</a>
 				</div>
 				<div class="text-center p-t-136">
 					<a class="txt2">
@@ -96,7 +96,7 @@ for(var i = 0; i < jobs.length; i++) {
 	var body = document.createElement("p");
 	body.innerHTML = jobs[i].body;
 	var button = document.createElement("p");
-	button.innerHTML = "<button type='submit' name='data[id]' value='"+ jobs[i].id +"'>Apply</button>";
+	button.innerHTML = "<button class='apply' type='submit' name='data[id]' value='"+ jobs[i].id +"'>Apply</button>";
 	div.appendChild(title);
 	div.appendChild(body);
 	div.appendChild(button);
