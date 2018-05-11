@@ -34,11 +34,21 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-			<div class="topnav">
-  				<a href="profile.php">Edit Profile</a>
-  				<a href="postjob.php">Create New</a>
-				<a href="#" onclick="remove()" >Remove Post</a>
+			
+				<div class="topnav">
+  					<a href="profile.php">Edit Profile</a>
+  					<a href="postjob.php">Create New</a>
+					<a href="#" onclick="remove()" >Remove Post</a>
+					<a href="logout.php"> Logout</a>
 				</div>
+				
+				<div class="text-center p-t-136">
+					<a class="txt2">
+					
+					</a>
+				</div>
+
+			
 				<div class="text-center p-t-136">
 					<a class="txt2">
 					

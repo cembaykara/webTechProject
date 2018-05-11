@@ -30,6 +30,10 @@
     font-size: 18px;
 }
 
+.topnav {
+    display: inline-block;
+}
+
 button {
     border: none;
     outline: 0;
@@ -47,6 +51,7 @@ a {
     text-decoration: none;
     font-size: 22px;
     color: black;
+    margin-right: 20px;
 }
 
 button:hover, a:hover {
